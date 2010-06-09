@@ -1,0 +1,7 @@
+analysis/
+classes/
+lib_managed/
+src_managed/
+project/boot/
+project/build/target/
+project/plugins/target/
