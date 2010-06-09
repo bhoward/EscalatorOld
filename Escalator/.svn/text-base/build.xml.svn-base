@@ -1,0 +1,95 @@
+<project default="build" basedir=".">
+  <property file="build.properties" />
+  <property name="sources.dir" value="src" />
+  <property name="build.dir" value="bin" />
+  <property name="lib.dir" value="lib" />
+  <property name="main.object" value="edu.depauw.escalator.Escalator" />
+  
+  <target name="init">
+    <property name="scala-library.jar" value="${scala.lib}/scala-library.jar" />
+    <property name="scala-compiler.jar" value="${scala.lib}/scala-compiler.jar" />
+    <property name="scala-swing.jar" value="${scala.lib}/scala-swing.jar" />
+  	
+    <property name="eawt.jar" value="${lib.dir}/AppleJavaExtensions.jar" />
+  
+    <path id="scala.classpath">
+      <pathelement location="${scala-library.jar}" />
+      <pathelement location="${scala-compiler.jar}" />
+    </path>
+  
+    <path id="run.classpath">
+      <path refid="scala.classpath" />
+      <pathelement location="${scala-swing.jar}" />
+      <pathelement location="${build.dir}" />
+    </path>
+  	
+  	<path id="build.classpath">
+  	  <path refid="run.classpath" />
+  	  <pathelement location="${eawt.jar}" />
+  	</path>
+  
+    <taskdef resource="scala/tools/ant/antlib.xml">
+      <classpath refid="scala.classpath" />
+    </taskdef>
+  	
+  	<taskdef name="jarbundler" classname="net.sourceforge.jarbundler.JarBundler"
+  	  classpath="lib/jarbundler-2.1.0.jar" />
+  	
+  	<taskdef name="launch4j" classname="net.sf.launch4j.ant.Launch4jTask"
+  	    classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
+
+    <mkdir dir="${build.dir}" />
+  </target>
+  
+  <target name="build" depends="init">
+    <scalac srcdir="${sources.dir}" destdir="${build.dir}" classpathref="build.classpath" force="changed">
+      <include name="**/*.scala" />
+      <include name="**/*.java" />
+    </scalac>
+  	<javac srcdir="${sources.dir}" destdir="${build.dir}" classpathref="build.classpath">
+  	  <include name="**/*.java" />
+  	</javac>
+  </target>
+  
+  <target name="run" depends="build">
+    <java classname="${main.object}" classpathref="run.classpath" fork="true" spawn="true">
+    </java>
+  </target>
+	
+  <target name="package" depends="build">
+    <jar destfile="Escalator.jar" filesetmanifest="mergewithoutmain">
+      <manifest>
+        <attribute name="Main-Class" value="${main.object}" />
+        <attribute name="Class-Path" value="." />
+      </manifest>
+      <zipfileset excludes="META-INF/*.SF" src="${scala-library.jar}" />
+      <zipfileset excludes="META-INF/*.SF" src="${scala-swing.jar}" />
+      <zipfileset excludes="META-INF/*.SF" src="${scala-compiler.jar}" />
+      <fileset dir="${build.dir}" />
+    </jar>
+  </target>
+
+	<target name="bundle" depends="package">
+		<jarbundler dir="release"
+		            name="Escalator"
+		            mainclass="${main.object}" 
+		            jar="Escalator.jar"
+		            bundleid="edu.depauw.escalator"
+			          infostring="Escalator 1.0.0"
+			          icon="Escalator.icns"
+			          stubfile="JavaApplicationStub"
+		            version="1.0.0"
+		            jvmversion="1.5+">
+			<documenttype name="Escalator document"
+			                    extensions="scales" 
+			                    role="Editor" />
+		</jarbundler>
+		
+		<launch4j configFile="launch4j.xml" outfile="release/Escalator.exe" />
+		<copy file="Escalator.jar" todir="release" />
+	</target>
+
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+</project>

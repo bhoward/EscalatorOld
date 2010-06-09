@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/scales/!svn/ver/128/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d
+END
+Canvas3D.scala
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/scales/!svn/ver/68/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d/Canvas3D.scala
+END
+Graphics3DDriver.scala
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/scales/!svn/ver/80/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d/Graphics3DDriver.scala
+END
+Cone.scala
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/scales/!svn/ver/103/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d/Cone.scala
+END
+Graphics3DDriver2.scala
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/scales/!svn/ver/108/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d/Graphics3DDriver2.scala
+END
+Sphere.scala
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/scales/!svn/ver/103/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d/Sphere.scala
+END
+Shape3D.scala
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/scales/!svn/ver/65/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d/Shape3D.scala
+END
+Box.scala
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/scales/!svn/ver/82/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d/Box.scala
+END
+Cylinder.scala
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/scales/!svn/ver/103/ScalaGraphics/src/edu/depauw/csc/scala/graphics3d/Cylinder.scala
+END

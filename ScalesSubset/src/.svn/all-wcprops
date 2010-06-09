@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/scales/!svn/ver/118/ScalesSubset/src
+END
+Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/scales/!svn/ver/101/ScalesSubset/src/Test.java
+END
+ScalaSubsetParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/scales/!svn/ver/118/ScalesSubset/src/ScalaSubsetParser.java
+END
+ScalaSubsetLexer.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/scales/!svn/ver/118/ScalesSubset/src/ScalaSubsetLexer.java
+END
+ScalaSubset.tokens
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/scales/!svn/ver/118/ScalesSubset/src/ScalaSubset.tokens
+END
+ScalaSubset__.g
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/scales/!svn/ver/118/ScalesSubset/src/ScalaSubset__.g
+END

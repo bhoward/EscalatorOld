@@ -1,0 +1,37 @@
+This gives some examples of using turtle graphics.
+
+A turtle draws on a Canvas, which is like a Rectangle with an extra argument giving instructions to the turtle.  The simplest way to do this is to provide an anonymous function { turtle => ... }, where the body applies a chain of method calls to the provided turtle:
+
+> Canvas(100, 100) { turtle => turtle forward 20 left 90 forward 30 }
+ 
+ 
+ 
+ 
+A more composable approach uses a "point-free" style, where we define functions of type Turtle => Turtle (aliased to "Path" below), first for the primitive path components, and then for larger pieces of the drawing.  The object edu.depauw.scales.path, imported below, defines primitive functions for each of the basic operations (forward, left, right, penUp, penDown, moveTo, and turnTo).
+
+For example, here is the Koch snowflake curve ("andThen" is a built-in operation on functions which composes them in "diagram order": f andThen g is the function { x => g(f(x)) }):
+
+@
+import path._
+
+def koch(x : Double) : Path =
+  if (x <= 1) forward(x)
+  else koch(x/3) andThen left(60) andThen
+       koch(x/3) andThen right(120) andThen
+       koch(x/3) andThen left(60) andThen
+       koch(x/3)
+
+def snow(x : Double) : Path =
+  penUp andThen moveTo(-x/2, x/3) andThen penDown andThen
+  koch(x) andThen right(120) andThen
+  koch(x) andThen right(120) andThen
+  koch(x) andThen right(120)
+@@
+
+Finally, here is an example of 
+> Canvas(400, 400)(snow(300))
+ 
+ 
+ 
+ 
+ 

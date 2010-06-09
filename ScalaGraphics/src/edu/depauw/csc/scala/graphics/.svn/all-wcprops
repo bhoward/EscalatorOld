@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/scales/!svn/ver/162/ScalaGraphics/src/edu/depauw/csc/scala/graphics
+END
+GraphicsDriver2.scala
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/scales/!svn/ver/105/ScalaGraphics/src/edu/depauw/csc/scala/graphics/GraphicsDriver2.scala
+END
+Square.scala
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/scales/!svn/ver/47/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Square.scala
+END
+Oval.scala
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/scales/!svn/ver/47/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Oval.scala
+END
+Circle.scala
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/scales/!svn/ver/47/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Circle.scala
+END
+Composite.scala
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/scales/!svn/ver/47/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Composite.scala
+END
+Rectangle.scala
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/scales/!svn/ver/47/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Rectangle.scala
+END
+PolygonExt.scala
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/scales/!svn/ver/132/ScalaGraphics/src/edu/depauw/csc/scala/graphics/PolygonExt.scala
+END
+Canvas.scala
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/scales/!svn/ver/158/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Canvas.scala
+END
+GraphicsDriver.scala
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/scales/!svn/ver/111/ScalaGraphics/src/edu/depauw/csc/scala/graphics/GraphicsDriver.scala
+END
+Color.scala
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/scales/!svn/ver/56/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Color.scala
+END
+AnimatedCanvas.scala
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/scales/!svn/ver/158/ScalaGraphics/src/edu/depauw/csc/scala/graphics/AnimatedCanvas.scala
+END
+Sierpinski.scala
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/scales/!svn/ver/132/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Sierpinski.scala
+END
+ShapeExt.scala
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/scales/!svn/ver/47/ScalaGraphics/src/edu/depauw/csc/scala/graphics/ShapeExt.scala
+END
+Line.scala
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/scales/!svn/ver/162/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Line.scala
+END
+Surface.scala
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/scales/!svn/ver/53/ScalaGraphics/src/edu/depauw/csc/scala/graphics/Surface.scala
+END

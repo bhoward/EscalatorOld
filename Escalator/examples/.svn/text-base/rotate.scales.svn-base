@@ -1,0 +1,15 @@
+@
+def cyclic(i: Int, max: Int):Int = {
+  val m = i % (max*2)
+  if (m > max) max * 2 - m 
+  else m
+}
+@@
+
+> val x = Timer(1)
+
+> val t = Timer()
+
+> val rad = 100
+
+> (Circle(rad).fill(Color(cyclic(x.value, 255), cyclic(x.value+100, 255), cyclic(x.value+200, 255))).at((Math.sin(t.value)*rad).toInt+rad, (Math.cos(t.value)*rad).toInt+rad).size(400,400) + Circle(rad).at(rad, rad)).rotateDeg(x.value)

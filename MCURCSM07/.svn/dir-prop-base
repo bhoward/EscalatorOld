@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 39
+*.aux
+*.log
+*.pdf
+*.blg
+*.bbl
+.project
+
+END

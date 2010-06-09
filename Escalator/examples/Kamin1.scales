@@ -1,0 +1,289 @@
+Kamin Chapter 1: The Basic Evaluator
+
+Here is the ADT describing the abstract syntax of the basic evaluator language:
+@
+import scala.collection.mutable.Map
+
+sealed trait TopLevel {
+  def execute(fundefs : FunctionEnvironment, globals : Environment) : Any
+}
+
+sealed trait Expression extends TopLevel {
+  def eval(fundefs : FunctionEnvironment, globals : Environment, locals : Environment) : Int
+  def execute(fundefs : FunctionEnvironment, globals : Environment) =
+    eval(fundefs, globals, Map())
+}
+
+case class ValueExpression(num : Int) extends Expression {
+  def eval(fundefs : FunctionEnvironment, globals : Environment, locals : Environment) = num
+}
+
+case class VariableExpression(id : Name) extends Expression {
+  def eval(fundefs : FunctionEnvironment, globals : Environment, locals : Environment) =
+    if (locals contains id) locals(id)
+    else if (globals contains id) globals(id)
+    else throw EvalError("error: undefined variable " + id)
+}
+
+case class ApplicationExpression(op : Name, args : List[Expression]) extends Expression {
+  def eval(fundefs : FunctionEnvironment, globals : Environment, locals : Environment) =
+    if (controlOps contains op) applyControlOp(op, args, fundefs, globals, locals)
+    else if (valueOps contains op) applyValueOp(op, args map (_.eval(fundefs, globals, locals)))
+    else applyUserOp(op, args map (_.eval(fundefs, globals, locals)), fundefs, globals)
+}
+
+case class FunctionDefinition(id : Name, params : List[Name], body : Expression) extends TopLevel {
+  def execute(fundefs : FunctionEnvironment, globals : Environment) = {
+    fundefs(id) = this
+    "defined " + id
+  }
+}
+
+type Name = String
+
+type Environment = Map[String, Int]
+
+type FunctionEnvironment = Map[String, FunctionDefinition]
+
+case class EvalError(msg : String) extends Exception(msg)
+@@
+
+Here we will define some functions and variables for testing:
+@
+val doubleFun = FunctionDefinition("double", List("x"), ApplicationExpression("*", List(ValueExpression(2), VariableExpression("x"))))
+val glob = Map("x" -> 42, "y" -> 17)
+val loc = Map("y" -> 99)
+val funs = Map("double" -> doubleFun)
+@@
+
+ 
+Variable x is found in the global environment:
+> VariableExpression("x").eval(funs, glob, loc)
+ 
+ 
+ 
+ 
+ 
+Variable y is in both environments, so the local one shadows the global:
+> VariableExpression("y").eval(funs, glob, loc)
+ 
+ 
+ 
+ 
+ 
+Variable z is not found:
+> VariableExpression("z").eval(funs, glob, loc)
+ 
+ 
+ 
+ 
+ 
+Here's some use of built-in functions (see below):
+> ApplicationExpression("*", List(ValueExpression(2), VariableExpression("x"))).eval(funs, glob, loc)
+ 
+ 
+ 
+ 
+ 
+> ApplicationExpression("if", List(ValueExpression(0), VariableExpression("x"), VariableExpression("y"))).eval(funs, glob, loc)
+ 
+ 
+ 
+ 
+ 
+> ApplicationExpression("if", List(ValueExpression(1), VariableExpression("x"), VariableExpression("y"))).eval(funs, glob, loc)
+ 
+ 
+ 
+ 
+ 
+> ApplicationExpression("double", List(VariableExpression("x"))).eval(funs, glob, loc)
+ 
+ 
+ 
+
+
+Kamin uses a LISP-like syntax for all of his languages, with a top-level REPL which Reads from the terminal, Evaluates the program, Prints the result, and Loops.  Instead, we will define a read function which turns a LISP-like string into a SExpr (Symbolic Expression), followed by a parser which turns a SExpr into an abstract syntax object.  Evaluation and printing are then responsibilities of that object.  This will allow us to write our own REPL if we wish, or to define a different concrete syntax.
+
+@
+sealed trait SExpr
+
+case class Atom(id : String) extends SExpr
+case class Sequence(elements : List[SExpr]) extends SExpr
+
+import scala.util.parsing.combinator._
+
+case class ParseError(msg : String) extends Exception(msg)
+
+object SExprParser extends RegexParsers {
+  // comments go from ; to end of line
+  override val whiteSpace = """(\s|(;.*\n))+""".r
+
+  // atoms are strings of anything other than parentheses and whitespace
+  val atom : Parser[SExpr] = """[^()\s;]+""".r ^^ Atom
+
+  // a sequence is a list of SExprs in parentheses
+  val sequence : Parser[SExpr] = "(" ~> (sexpr*) <~ ")" ^^ Sequence
+
+  // the only kinds of SExpr are atoms and sequences
+  val sexpr : Parser[SExpr] = atom | sequence
+
+  def read(s : String) = parseAll(sexpr, s + "\n") match {
+    case Success(expr, _) => expr
+    case Failure(msg, _) => throw ParseError("fail: " + msg)
+    case Error(msg, _) => throw ParseError("error: " + msg)
+  }
+}
+@@
+
+> SExprParser.read("(hello ;ignore this\nworld 42)")
+ 
+ 
+ 
+ 
+
+ 
+Here are the parsing functions to convert from the SExprs to the abstract syntax:
+
+@
+def parseExpression(sexpr : SExpr) : Expression = sexpr match {
+  case Atom(s) =>
+    if (Character.isDigit(s(0)) || s(0) == '-')
+      ValueExpression(Integer.parseInt(s))
+    else
+      VariableExpression(s)
+  case Sequence(Atom(op) :: args) =>
+    ApplicationExpression(op, args map parseExpression)
+  case _ =>
+    throw ParseError("error: empty expression")
+}
+
+def parseDefinition(sexpr : SExpr) : FunctionDefinition = sexpr match {
+  case Sequence(Atom("define") :: Atom(id) :: Sequence(args) :: expr :: Nil) =>
+    FunctionDefinition(id, parseArgs(args), parseExpression(expr))
+  case _ =>
+    throw ParseError("error: invalid function definition")
+}
+
+def parseArgs(args : List[SExpr]) : List[Name] = args map {
+  case Atom(id) => id
+  case _ => throw ParseError("error: expected variable name")
+}
+
+def parseTopLevel(sexpr : SExpr) : TopLevel = sexpr match {
+  case Sequence(Atom("define") :: _) => parseDefinition(sexpr)
+  case _ => parseExpression(sexpr)
+}
+@@
+
+> parseTopLevel(SExprParser.read("(* 2 x)"))
+ 
+ 
+ 
+ 
+ 
+
+> parseTopLevel(SExprParser.read("(define double (x) (* 2 x))"))
+ 
+ 
+ 
+ 
+ 
+
+Here are the definitions for the various kinds of operations and how to apply them:
+
+@
+import scala.collection.immutable.Set
+
+val controlOps = Set("if", "while", "set", "begin")
+val valueOps = Set("+", "-", "*", "/", "=", "<", ">", "print")
+
+def applyControlOp(op : String, args : List[Expression],
+      fundefs : FunctionEnvironment, globals : Environment, locals : Environment) : Int =
+  op match {
+    case "if" =>
+      if (args(0).eval(fundefs, globals, locals) != 0)
+        args(1).eval(fundefs, globals, locals)
+      else
+        args(2).eval(fundefs, globals, locals)
+
+    case "while" =>
+      while (args(0).eval(fundefs, globals, locals) != 0)
+        args(1).eval(fundefs, globals, locals)
+      0
+
+    case "set" =>
+      val VariableExpression(id) = args(0)
+      val n = args(1).eval(fundefs, globals, locals)
+      if (locals contains id)
+        locals(id) = n
+      else
+        globals(id) = n
+      n
+
+    case "begin" =>
+      val res = args map (_.eval(fundefs, globals, locals))
+      res(res.length - 1)
+
+    case _ => 0 // shouldn't happen
+  }
+
+def applyValueOp(op : String, args : List[Int]) : Int =
+  op match {
+    case "+" => args(0) + args(1)
+    case "-" => args(0) - args(1)
+    case "*" => args(0) * args(1)
+    case "/" => args(0) / args(1)
+    case "=" => if (args(0) == args(1)) 1 else 0
+    case "<" => if (args(0) < args(1)) 1 else 0
+    case ">" => if (args(0) > args(1)) 1 else 0
+    case "print" => args(0) // TODO how can we actually print?  Dialog box?
+    case _ => 0 // shouldn't happen
+  }
+
+def applyUserOp(op : String, args : List[Int], fundefs : FunctionEnvironment, globals : Environment) : Int =
+  if (fundefs contains op) {
+    val FunctionDefinition(_, params, body) = fundefs(op)
+    if (params.length != args.length) throw EvalError("error: wrong number of arguments to " + op)
+    val locals = Map() ++ (params zip args)
+    body.eval(fundefs, globals, locals)
+  } else {
+    throw EvalError("error: undefined function " + op)
+  }
+@@
+
+Finally, here is a function which, when given a list of lines, parses and evaluates them in sequence:
+@
+def run(lines : List[String], fundefs : FunctionEnvironment, globals : Environment) =
+  lines map (line => parseTopLevel(SExprParser.read(line)).execute(fundefs, globals))
+@@
+
+Here are Kamin's examples from pages 5-8:
+> run(List("3",
+|          "(+ 4 7)",
+|          "(set x 4)",
+|          "(+ x x)",
+|          "(print x)",
+|          "(set y 5)",
+|          "(begin (print x) (print y) (* x y))",
+|          "(if (> y 0) 5 10)",
+|          "(while (> y 0) (begin (set x (+ x x)) (set y (- y 1))))",
+|          "x",
+|          "(define +1 (x) (+ x 1))",
+|          "(+1 4)",
+|          "(define double (x) (+ x x))",
+|          "(double 4)",
+|          "x",
+|          "(define setx (x y) (begin (set x (+ x y)) x))",
+|          "(setx x 1)",
+|          "x",
+|          "(define not (boolval) (if boolval 0 1))",
+|          "(define <> (x y) (not (= x y)))",
+|          "(define mod (m n) (- m (* n (/ m n))))",
+|          "(define gcd (m n) (begin (set r (mod m n)) (while (<> r 0) (begin (set m n) (set n r) (set r (mod m n)))) n))",
+|          "(gcd 6 15)",
+|          "(define gcd2 (m n) (if (= n 0) m (gcd2 n (mod m n))))",
+|          "(gcd2 6 15)"
+|         ), Map(), Map())
+ 
+ 

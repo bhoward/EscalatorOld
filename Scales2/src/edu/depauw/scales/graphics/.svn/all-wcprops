@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/scales/!svn/ver/260/Scales2/src/edu/depauw/scales/graphics
+END
+GraphicPanel.scala
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/scales/!svn/ver/260/Scales2/src/edu/depauw/scales/graphics/GraphicPanel.scala
+END
+Shape.scala
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/scales/!svn/ver/255/Scales2/src/edu/depauw/scales/graphics/Shape.scala
+END
+GraphicsContext.scala
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/scales/!svn/ver/248/Scales2/src/edu/depauw/scales/graphics/GraphicsContext.scala
+END
+Font.scala
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/scales/!svn/ver/229/Scales2/src/edu/depauw/scales/graphics/Font.scala
+END
+Stroke.scala
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/scales/!svn/ver/236/Scales2/src/edu/depauw/scales/graphics/Stroke.scala
+END
+Transform.scala
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/scales/!svn/ver/249/Scales2/src/edu/depauw/scales/graphics/Transform.scala
+END
+Over.scala
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/scales/!svn/ver/206/Scales2/src/edu/depauw/scales/graphics/Over.scala
+END
+Bitmap.scala
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/scales/!svn/ver/247/Scales2/src/edu/depauw/scales/graphics/Bitmap.scala
+END
+Graphic.scala
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/scales/!svn/ver/226/Scales2/src/edu/depauw/scales/graphics/Graphic.scala
+END
+Color.scala
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/scales/!svn/ver/226/Scales2/src/edu/depauw/scales/graphics/Color.scala
+END
+Outline.scala
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/scales/!svn/ver/187/Scales2/src/edu/depauw/scales/graphics/Outline.scala
+END
+Image.scala
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/scales/!svn/ver/226/Scales2/src/edu/depauw/scales/graphics/Image.scala
+END
+Text.scala
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/scales/!svn/ver/229/Scales2/src/edu/depauw/scales/graphics/Text.scala
+END
+Fill.scala
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/scales/!svn/ver/187/Scales2/src/edu/depauw/scales/graphics/Fill.scala
+END
+Blank.scala
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/scales/!svn/ver/226/Scales2/src/edu/depauw/scales/graphics/Blank.scala
+END
+ScalesPanel.scala
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/scales/!svn/ver/260/Scales2/src/edu/depauw/scales/graphics/ScalesPanel.scala
+END
