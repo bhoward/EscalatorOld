@@ -1,8 +1,0 @@
-> val y = Scrollbar(100)
-
-> y
- 
-> val sq = Square(500)
-
-> sq + Circle(y.value).at(sq.mousePos._1 - y.value/2, sq.mousePos._2 - y.value/2)
- 
