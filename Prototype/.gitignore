@@ -1,5 +1,7 @@
 analysis/
 classes/
+test-analysis/
+test-classes/
 lib_managed/
 src_managed/
 project/boot/

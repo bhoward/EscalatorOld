@@ -1,0 +1,6 @@
+#External Dependencies
+#Thu Jun 10 09:29:42 EDT 2010
+/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Classes/classes.jar=src/test/scala/FactorialSpec.scala
+/Users/bhoward/Git/Escalator/Prototype/project/boot/scala-2.7.7/lib/scala-library.jar=src/test/scala/FactorialSpec.scala
+/Users/bhoward/Git/Escalator/Prototype/lib_managed/scala_2.7.7/compile/specs-1.6.2.1.jar=src/test/scala/FactorialSpec.scala
+/Users/bhoward/Git/Escalator/Prototype/target/scala_2.7.7/classes/edu/depauw/Factorial$.class=src/test/scala/FactorialSpec.scala
