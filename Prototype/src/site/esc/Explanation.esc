@@ -12,7 +12,9 @@ Here is the code for a factorial function:
 
 Now we can test it:
 // test
-Factorial(7) must_==(5040)
+"Factorial(7) is 5040" in {
+  Factorial(7) must_==(5040)
+}
 // end test
 
 And here is an example of its use:

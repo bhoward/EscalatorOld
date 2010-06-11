@@ -24,7 +24,9 @@ object Factorial {
 
     <p>Now we can test it:</p>
 <pre>
-Factorial(7) must_==(5040)
+"Factorial(7) is 5040" in {
+  Factorial(7) must_==(5040)
+}
 </pre>
 <pre style="color: green">
   + Factorial(7) is 5040
