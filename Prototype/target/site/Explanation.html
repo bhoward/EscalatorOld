@@ -1,6 +1,18 @@
 <html>
   <head>
     <title>Explanation</title>
+
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushJava.js"></script>
+    <script type="text/javascript" src="js/shBrushScala.js"></script>
+    <script type="text/javascript" src="js/shBrushPlain.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="css/shThemeDefault.css" />
+
+    <script type="text/javascript">
+      SyntaxHighlighter.all()
+    </script>
   </head>
   <body>
     <h1>Prototype Project</h1>
@@ -13,17 +25,17 @@
     tests/examples.
 
     Here is the code for a factorial function:
-<pre>
+<pre class="brush: scala">
 /**
  * A non-OO object to compute factorial.  It's not good FP either...
  */
 object Factorial {
-  def apply(n: Int): BigInt = if (n <= 1) 1 else Factorial(n - 1) * n
+  def apply(n: Int): BigInt = if (n &lt;= 1) 1 else Factorial(n - 1) * n
 }
 </pre>
 
     <p>Now we can test it:</p>
-<pre>
+<pre class="brush: scala">
 "Factorial(7) is 5040" in {
   Factorial(7) must_==(5040)
 }
@@ -31,21 +43,21 @@ object Factorial {
 "Factorial(n) = Factorial(n-1) * n" in {
   val smallInteger = Gen.choose(1, 100)
 
-  Prop.forAll(smallInteger) { n: Int =>
+  Prop.forAll(smallInteger) { n: Int =&gt;
     Factorial(n) == Factorial(n-1) * n
   } must pass
 }                                                                               
 </pre>
-<pre style="color: green">
+<pre style="color: green; background-color: #F8F8F8" class="syntaxhighlighter">
   + Factorial(7) is 5040
   + Factorial(n) = Factorial(n-1) * n
 </pre>
 
     <p>And here is an example of its use:</p>
-<pre>
+<pre class="brush: scala">
 Factorial(100)
 </pre>
-<pre style="color: blue">
+<pre style="color: blue; background-color: #F8F8F8" class="syntaxhighlighter">
 res0: BigInt = 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
 </pre>
 
