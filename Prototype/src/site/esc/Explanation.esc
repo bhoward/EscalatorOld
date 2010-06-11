@@ -15,6 +15,14 @@ Now we can test it:
 "Factorial(7) is 5040" in {
   Factorial(7) must_==(5040)
 }
+
+"Factorial(n) = Factorial(n-1) * n" in {
+  val smallInteger = Gen.choose(1, 100)
+
+  Prop.forAll(smallInteger) { n: Int =>
+    Factorial(n) == Factorial(n-1) * n
+  } must pass
+}
 // end test
 
 And here is an example of its use:
