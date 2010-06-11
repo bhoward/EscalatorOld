@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" ></meta>
+        <title>FactorialSpec.scala</title>
+        <script type="text/javascript" src="jquery-all.js"></script>
+        <script type="text/javascript" src="linked.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" title="Style"></link>
+    </head>
+    <body>
+        <pre>
+<span class="keyword">package</span> edu.depauw
+
+<span class="keyword">import</span> org.specs._
+
+<span class="keyword">class</span> <a title="class FactorialTest extends org.specs.Specification with ScalaObject" id="6753">FactorialTest</a> <span class="keyword">extends</span> <a title="org.specs.Specification" id="6925">Specification</a> {
+  <a href="#6753" title="implicit org.specs.specification.BaseSpecification.specifyExample : (String)FactorialTest.this.ExampleSpecification" class="string">&quot;Factorial(0) is 1&quot;</a> <span title="(=&gt; org.specs.specification.Result[BigInt])(implicit scala.reflect.Manifest[org.specs.specification.Result[BigInt]])org.specs.specification.Example">in</span> {
+    <a href="#6753" title="(=&gt; BigInt)org.specs.specification.Expectation[BigInt]">Factorial</a>(<span title="Int(0)" class="int">0</span>) <a href="#6753" title="(Any)(implicit org.specs.specification.Detailed)org.specs.specification.Result[BigInt]">must_==</a> <span title="Int(1)" class="int">1</span>
+  }
+  <a href="#6753" title="implicit org.specs.specification.BaseSpecification.specifyExample : (String)FactorialTest.this.ExampleSpecification" class="string">&quot;Factorial(7) is 5040&quot;</a> <span title="(=&gt; org.specs.specification.Result[BigInt])(implicit scala.reflect.Manifest[org.specs.specification.Result[BigInt]])org.specs.specification.Example">in</span> {
+    <a href="#6753" title="(=&gt; BigInt)org.specs.specification.Expectation[BigInt]">Factorial</a>(<span title="Int(7)" class="int">7</span>) <a href="#6753" title="(Any)(implicit org.specs.specification.Detailed)org.specs.specification.Result[BigInt]">must_==</a> <span title="Int(5040)" class="int">5040</span>
+  }
+
+  <a href="#6753" title="implicit org.specs.specification.BaseSpecification.specifyExample : (String)FactorialTest.this.ExampleSpecification" class="string">&quot;Factorial(-1) is defined&quot;</a> <span title="(=&gt; org.specs.specification.Result[BigInt])(implicit scala.reflect.Manifest[org.specs.specification.Result[BigInt]])org.specs.specification.Example">in</span> {
+    <a href="#6753" title="(=&gt; BigInt)org.specs.specification.Expectation[BigInt]">Factorial</a>(-<span title="Int(-1)" class="int">1</span>) <a href="#6753" title="(Any)(implicit org.specs.specification.Detailed)org.specs.specification.Result[BigInt]">must_==</a> <span title="(Int)BigInt">Factorial</span>(-<span title="Int(-1)" class="int">1</span>)
+  }
+}
+
+        </pre>
+    </body>
+</html>

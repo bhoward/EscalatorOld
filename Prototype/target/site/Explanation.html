@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Explanation</title>
+  </head>
+  <body>
+    <h1>Prototype Project</h1>
+
+    <p>This is just a stupid example of what an Escalator document might look like.  This
+    documentation is basically a
+    <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>
+    document, with some extensions (indicated by an initial <code>//</code> on a line)
+    that are caught by our preprocessor to handle extracted code fragments and embedded
+    tests/examples.
+
+    Here is the code for a factorial function:
+<pre>
+/**
+ * A non-OO object to compute factorial.  It's not good FP either...
+ */
+object Factorial {
+  def apply(n: Int): BigInt = if (n <= 1) 1 else Factorial(n - 1) * n
+}
+</pre>
+
+    <p>Now we can test it:</p>
+<pre>
+Factorial(7) must_==(5040)
+</pre>
+<pre style="color: green">
+  + Factorial(7) is 5040
+</pre>
+
+    <p>And here is an example of its use:</p>
+<pre>
+Factorial(100)
+</pre>
+<pre style="color: blue">
+res0: BigInt = 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
+</pre>
+
+    <p>That's about it.</p>
+  </body>
+</html>

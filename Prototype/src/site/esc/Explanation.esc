@@ -12,12 +12,12 @@ Here is the code for a factorial function:
 
 Now we can test it:
 // test
-fact(7) must_==(5040)
+Factorial(7) must_==(5040)
 // end test
 
 And here is an example of its use:
 // example
-fact(50)
+Factorial(100)
 // end example
 
 That's about it.
