@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.depauw</groupId>
+  <artifactId>Prototype</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0</version>
+  <name>Prototype Escalator Project</name>
+  <url>http://scales.csc.depauw.edu/</url>
+  <description>This is just a (partly) hand-built example.</description>
+
+  <developers>
+    <developer>
+      <id>bhoward</id>
+      <name>Brian Howard</name>
+      <email>bhoward@depauw.edu</email>
+      <roles>
+        <role>Project Manager</role>
+      </roles>
+      <organization>DePauw University</organization>
+      <timezone>-5</timezone>
+    </developer>
+    <developer>
+      <id>buden</id>
+      <name>Nathaniel Bude</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <organization>Ripon College</organization>
+      <timezone>-6</timezone>
+    </developer>
+    <developer>
+      <id>ebruckart</id>
+      <name>Emily Bruckart</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <organization>Shippensburg University</organization>
+      <timezone>-5</timezone>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/bhoward/Escalator.git</connection>
+    <developerConnection>scm:git:https://bhoward@github.com/bhoward/Escalator.git</developerConnection>
+    <url>http://github.com/bhoward/Escalator/tree/master/Prototype/</url>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.scala-tools.testing</groupId>
+      <artifactId>specs</artifactId>
+      <version>1.6.2.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>2.7.7</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>ScalaToolsMaven2Repository</id>
+      <name>Scala-Tools Maven2 Repository</name>
+      <url>http://scala-tools.org/repo-releases/</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>scala-tools.org</id>
+      <name>Scala-tools Maven2 Repository</name>
+      <url>http://scala-tools.org/repo-releases</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <build>
+    <plugins>
+      <!-- Tells Maven to use the Scala compiler first, from http://scala-tools.org/mvnsites/maven-scala-plugin/usage_java.html -->
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+        <configuration>
+          <scalaVersion>${scala.version}</scalaVersion>
+          <jvmArgs>
+            <jvmArg>-Xmx900M</jvmArg>
+          </jvmArgs>
+          <sendJavaToScalac>false</sendJavaToScalac>
+          <sourceDir>src/main/scala</sourceDir>
+        </configuration>
+        <executions>
+          <execution>
+            <id>scala-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>add-source</goal>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>scala-xray</id>
+            <phase>site</phase>
+              <goals>
+                <goal>compile</goal>
+              </goals>
+              <configuration>
+              <displayCmd>true</displayCmd>
+              <args>
+                <arg>-P:sxr:base-directory:src/main/scala</arg>
+              </args>
+              <compilerPlugins>
+                <compilerPlugin>
+                  <groupId>org.scala-tools.sxr</groupId>
+                  <artifactId>sxr_2.7.7</artifactId>
+                  <version>0.2.4</version>
+                </compilerPlugin>
+              </compilerPlugins>
+            </configuration>
+          </execution>
+          <execution>
+            <id>scala-compile-first</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>add-source</goal>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>scala-test-compile</id>
+            <phase>process-test-resources</phase>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jxr-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
+
+</project>

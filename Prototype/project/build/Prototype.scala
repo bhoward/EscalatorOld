@@ -7,5 +7,4 @@ class PrototypeProject(info: ProjectInfo) extends DefaultProject(info) with Auto
   override def compileOptions =
     CompileOption("-P:sxr:base-directory:" + mainScalaSourcePath.absolutePath) ::
     super.compileOptions.toList
-
 }
