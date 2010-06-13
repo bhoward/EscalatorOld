@@ -23,6 +23,10 @@ Now we can test it:
     Factorial(n) == Factorial(n-1) * n
   } must pass
 }
+
+"Factorial(-1) is 0" in {
+  Factorial(-1) must_==(0)
+}
 // end test
 
 And here is an example of its use:
