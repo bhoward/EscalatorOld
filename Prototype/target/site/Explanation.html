@@ -1,16 +1,18 @@
-<html>
-  <head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Explanation</title>
 
-    <script type="text/javascript" src="js/shCore.js"></script>
-    <script type="text/javascript" src="js/shBrushJava.js"></script>
-    <script type="text/javascript" src="js/shBrushScala.js"></script>
-    <script type="text/javascript" src="js/shBrushPlain.js"></script>
+    <script type="text/javascript" src="scripts/shCore.js"></script>
+    <script type="text/javascript" src="scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="scripts/shBrushScala.js"></script>
 
     <link type="text/css" rel="stylesheet" href="css/shCore.css" />
     <link type="text/css" rel="stylesheet" href="css/shThemeDefault.css" />
 
     <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
       SyntaxHighlighter.all()
     </script>
   </head>
@@ -25,7 +27,7 @@
     tests/examples.
 
     Here is the code for a factorial function:
-<pre class="brush: scala">
+<pre class="brush: scala;">
 /**
  * A non-OO object to compute factorial.  It's not good FP either...
  */
@@ -35,7 +37,7 @@ object Factorial {
 </pre>
 
     <p>Now we can test it:</p>
-<pre class="brush: scala">
+<pre class="brush: scala;">
 "Factorial(7) is 5040" in {
   Factorial(7) must_==(5040)
 }
@@ -48,16 +50,16 @@ object Factorial {
   } must pass
 }                                                                               
 </pre>
-<pre style="color: green; background-color: #F8F8F8" class="syntaxhighlighter">
+<pre style="color: green" class="syntaxhighlighter">
   + Factorial(7) is 5040
   + Factorial(n) = Factorial(n-1) * n
 </pre>
 
     <p>And here is an example of its use:</p>
-<pre class="brush: scala">
+<pre class="brush: scala;">
 Factorial(100)
 </pre>
-<pre style="color: blue; background-color: #F8F8F8" class="syntaxhighlighter">
+<pre style="color: blue" class="syntaxhighlighter">
 res0: BigInt = 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
 </pre>
 
