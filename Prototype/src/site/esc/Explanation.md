@@ -29,7 +29,7 @@ Now we can test it:
   Prop.forAll(smallInteger) { n: Int =&gt;
     Factorial(n) == Factorial(n-1) * n
   } must pass
-}                                                                               
+}
 
 "Factorial(-1) is 0" in {
   Factorial(-1) must_==(0)
