@@ -8,3 +8,4 @@ project/boot/
 project/build/target/
 project/plugins/target/
 .settings/
+jsMath/
