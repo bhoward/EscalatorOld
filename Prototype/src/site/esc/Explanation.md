@@ -7,7 +7,7 @@ code fragments and embedded tests/examples.
 
 [1]: http://daringfireball.net/projects/markdown/ "Markdown"
 
-Here is the code for a factorial functionn, which computes \(n!=\prod_{i
+Here is the code for a factorial function, which computes \(n!=\prod_{i
 =1}^n i\):
 <pre class="brush: scala;">
 /**
