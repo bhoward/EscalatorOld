@@ -7,5 +7,6 @@ src_managed/
 project/boot/
 project/build/target/
 project/plugins/target/
-.settings/
 jsMath/
+.settings/
+.history
