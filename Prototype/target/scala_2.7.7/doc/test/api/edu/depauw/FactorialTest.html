@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+        <head><title>class FactorialTest in edu.depauw</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF8"></meta><meta content="scaladoc (version 2.7.7.final)" name="generator"></meta><link href="../../style.css" type="text/css" rel="stylesheet"></link><script type="text/javascript" src="../../script.js"></script>
+        </head>
+        <body onload="init()">
+        <table summary="" class="navigation">
+        <tr>
+          <td class="navigation-links" valign="top">
+            <!-- <table><tr></tr></table> -->
+          </td>
+          <td align="right" valign="top" style="white-space:nowrap;" rowspan="2">
+            <div class="doctitle-larger">Prototype 1.0 API</div>
+          </td>
+        </tr>
+        <tr><td></td></tr>
+      </table>
+        
+      <div class="entity">
+        <a href="../../edu/depauw$package.html" target="_self">edu.depauw</a>
+        <br></br>
+        <span class="entity">class  FactorialTest</span>
+      </div><hr></hr>
+      <div class="source">
+        [source: <a href="" class="edu/depauw/FactorialTest"><code>edu/depauw/FactorialTest.scala</code></a>]
+      </div><hr></hr>
+      <a name="FactorialTest"></a><dl>
+      <dt>
+        
+        <code></code>
+        <code>class</code>
+        <em>FactorialTest</em>
+      </dt>
+      <dd><code> extends </code><a href="" target="contentFrame" class="org/specs/Specification">org.specs.Specification</a><code> with </code><a href="" target="contentFrame" class="org/specs/ScalaCheck">org.specs.ScalaCheck</a></dd>
+    </dl>
+      
+
+<table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#successValueToProp" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers.successValueToProp</a>, <a href="#defaultPrettyParams" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers.defaultPrettyParams</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#minSize" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.minSize</a>, <a href="#maxSize" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.maxSize</a>, <a href="#maxDiscarded" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.maxDiscarded</a>, <a href="#minTestsOk" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.minTestsOk</a>, <a href="#workers" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.workers</a>, <a href="#wrkSize" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.wrkSize</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/Specification">org.specs.Specification</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#specs" target="contentFrame" class="org/specs/Specification">org.specs.Specification.specs</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/runner/Console">org.specs.runner.Console</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#timer" target="contentFrame" class="org/specs/runner/Console">org.specs.runner.Console.timer</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#Debug" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.Debug</a>, <a href="#Info" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.Info</a>, <a href="#Warning" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.Warning</a>, <a href="#Error" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.Error</a>, <a href="#level" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.level</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#filteredSpecs" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.filteredSpecs</a>, <a href="#susFilter" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.susFilter</a>, <a href="#exampleFilter" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.exampleFilter</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/specification/DetailedFailures">org.specs.specification.DetailedFailures</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#detailedFailures" target="contentFrame" class="org/specs/specification/DetailedFailures">org.specs.specification.DetailedFailures.detailedFailures</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#name" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.name</a>, <a href="#description" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.description</a>, <a href="#subSpecifications" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.subSpecifications</a>, <a href="#parentSpecification" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.parentSpecification</a>, <a href="#beforeSpec" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.beforeSpec</a>, <a href="#afterSpec" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.afterSpec</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/specification/ExampleExpectationsListener">org.specs.specification.ExampleExpectationsListener</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#expectationsListener" target="contentFrame" class="org/specs/specification/ExampleExpectationsListener">org.specs.specification.ExampleExpectationsListener.expectationsListener</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Values and Variables inherited from <a href="" target="contentFrame" class="org/specs/specification/SequentialExecution">org.specs.specification.SequentialExecution</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#sequential" target="contentFrame" class="org/specs/specification/SequentialExecution">org.specs.specification.SequentialExecution.sequential</a>
+        </td></tr>
+      </table>
+<table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/ScalaCheckVerifications">org.specs.ScalaCheckVerifications</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#anyToAnyWithParameters" target="contentFrame" class="org/specs/ScalaCheckVerifications">org.specs.ScalaCheckVerifications.anyToAnyWithParameters</a>, <a href="#toVerifies" target="contentFrame" class="org/specs/ScalaCheckVerifications">org.specs.ScalaCheckVerifications.toVerifies</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#defaultParameters" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers.defaultParameters</a>, <a href="#pass" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers.pass</a>, <a href="#pass" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers.pass</a>, <a href="#pass" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers.pass</a>, <a href="#pass" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers.pass</a>, <a href="#pass" target="contentFrame" class="org/specs/matcher/ScalaCheckMatchers">org.specs.matcher.ScalaCheckMatchers.pass</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#expectProperties" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.expectProperties</a>, <a href="#dontExpectProperties" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.dontExpectProperties</a>, <a href="#defaultValues" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.defaultValues</a>, <a href="#setParams" target="contentFrame" class="org/specs/matcher/ScalaCheckParameters">org.specs.matcher.ScalaCheckParameters.setParams</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/ScalaCheckFunctions">org.specs.matcher.ScalaCheckFunctions</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#checkProp" target="contentFrame" class="org/specs/matcher/ScalaCheckFunctions">org.specs.matcher.ScalaCheckFunctions.checkProp</a>, <a href="#forAllProp" target="contentFrame" class="org/specs/matcher/ScalaCheckFunctions">org.specs.matcher.ScalaCheckFunctions.forAllProp</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/Specification">org.specs.Specification</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#pretty" target="contentFrame" class="org/specs/Specification">org.specs.Specification.pretty</a>, <a href="#::" target="contentFrame" class="org/specs/Specification">org.specs.Specification.::</a>, <a href="#error" target="contentFrame" class="org/specs/Specification">org.specs.Specification.error</a>, <a href="#args_=" target="contentFrame" class="org/specs/Specification">org.specs.Specification.args_=</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#contextFirst" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.contextFirst</a>, <a href="#beforeContext" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.beforeContext</a>, <a href="#aroundExpectationsContext" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.aroundExpectationsContext</a>, <a href="#beforeContext" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.beforeContext</a>, <a href="#afterContext" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.afterContext</a>, <a href="#contextLast" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.contextLast</a>, <a href="#afterContext" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.afterContext</a>, <a href="#context" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.context</a>, <a href="#globalContext" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.globalContext</a>, <a href="#context" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.context</a>, <a href="#whenInContext" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.whenInContext</a>, <a href="#specifySus" target="contentFrame" class="org/specs/specification/Contexts">org.specs.specification.Contexts.specifySus</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#doBefore" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.doBefore</a>, <a href="#doAroundExpectations" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.doAroundExpectations</a>, <a href="#doAfter" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.doAfter</a>, <a href="#doFirst" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.doFirst</a>, <a href="#doLast" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.doLast</a>, <a href="#doBeforeSpec" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.doBeforeSpec</a>, <a href="#doAfterSpec" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.doAfterSpec</a>, <a href="#until" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.until</a>, <a href="#until" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.until</a>, <a href="#toShortActions" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.toShortActions</a>, <a href="#toShortActions2" target="contentFrame" class="org/specs/specification/BeforeAfter">org.specs.specification.BeforeAfter.toShortActions2</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#failureColored" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.failureColored</a>, <a href="#successColored" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.successColored</a>, <a href="#skipColored" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.skipColored</a>, <a href="#infoColored" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.infoColored</a>, <a href="#report" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.report</a>, <a href="#report" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.report</a>, <a href="#reportSpec" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.reportSpec</a>, <a href="#toAddableTuple" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.toAddableTuple</a>, <a href="#stats" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.stats</a>, <a href="#stats" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.stats</a>, <a href="#stats" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.stats</a>, <a href="#reportSystems" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.reportSystems</a>, <a href="#reportSus" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.reportSus</a>, <a href="#printSus" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.printSus</a>, <a href="#printStats" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.printStats</a>, <a href="#printStats" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.printStats</a>, <a href="#reportExamples" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.reportExamples</a>, <a href="#reportExample" target="contentFrame" class="org/specs/runner/OutputReporter">org.specs.runner.OutputReporter.reportExample</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#setConfiguration" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.setConfiguration</a>, <a href="#setNoStacktrace" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.setNoStacktrace</a>, <a href="#setFailedAndErrorsOnly" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.setFailedAndErrorsOnly</a>, <a href="#setNoStatistics" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.setNoStatistics</a>, <a href="#setFinalStatisticsOnly" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.setFinalStatisticsOnly</a>, <a href="#setColorize" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.setColorize</a>, <a href="#setPlanOnly" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.setPlanOnly</a>, <a href="#resetOptions" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.resetOptions</a>, <a href="#setOptionsFromConfig" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.setOptionsFromConfig</a>, <a href="#runConfiguration" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.runConfiguration</a>, <a href="#args" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.args</a>, <a href="#main" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.main</a>, <a href="#displayHelp" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.displayHelp</a>, <a href="#displayUsage" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.displayUsage</a>, <a href="#displayOptions" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.displayOptions</a>, <a href="#displayOptionsDescription" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.displayOptionsDescription</a>, <a href="#susFilterPattern" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.susFilterPattern</a>, <a href="#exampleFilterPattern" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.exampleFilterPattern</a>, <a href="#reportSpecs" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.reportSpecs</a>, <a href="#argValue" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.argValue</a>, <a href="#::" target="contentFrame" class="org/specs/runner/Reporter">org.specs.runner.Reporter.::</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#debug" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.debug</a>, <a href="#info" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.info</a>, <a href="#warning" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.warning</a>, <a href="#error" target="contentFrame" class="org/specs/log/Log">org.specs.log.Log.error</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/io/ConsoleOutput">org.specs.io.ConsoleOutput</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#println" target="contentFrame" class="org/specs/io/ConsoleOutput">org.specs.io.ConsoleOutput.println</a>, <a href="#printf" target="contentFrame" class="org/specs/io/ConsoleOutput">org.specs.io.ConsoleOutput.printf</a>, <a href="#flush" target="contentFrame" class="org/specs/io/ConsoleOutput">org.specs.io.ConsoleOutput.flush</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/io/Output">org.specs.io.Output</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#printStackTrace" target="contentFrame" class="org/specs/io/Output">org.specs.io.Output.printStackTrace</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#filter" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.filter</a>, <a href="#filter" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.filter</a>, <a href="#filter" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.filter</a>, <a href="#filterExample" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.filterExample</a>, <a href="#susPattern" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.susPattern</a>, <a href="#examplePattern" target="contentFrame" class="org/specs/runner/SpecsFilter">org.specs.runner.SpecsFilter.examplePattern</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/FailOrSkip">org.specs.FailOrSkip</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#fail" target="contentFrame" class="org/specs/FailOrSkip">org.specs.FailOrSkip.fail</a>, <a href="#fail" target="contentFrame" class="org/specs/FailOrSkip">org.specs.FailOrSkip.fail</a>, <a href="#skip" target="contentFrame" class="org/specs/FailOrSkip">org.specs.FailOrSkip.skip</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/DetailedFailures">org.specs.specification.DetailedFailures</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#detailedDiffs" target="contentFrame" class="org/specs/specification/DetailedFailures">org.specs.specification.DetailedFailures.detailedDiffs</a>, <a href="#detailedDiffs" target="contentFrame" class="org/specs/specification/DetailedFailures">org.specs.specification.DetailedFailures.detailedDiffs</a>, <a href="#detailedDiffs" target="contentFrame" class="org/specs/specification/DetailedFailures">org.specs.specification.DetailedFailures.detailedDiffs</a>, <a href="#detailedDiffs" target="contentFrame" class="org/specs/specification/DetailedFailures">org.specs.specification.DetailedFailures.detailedDiffs</a>, <a href="#noDetailedDiffs" target="contentFrame" class="org/specs/specification/DetailedFailures">org.specs.specification.DetailedFailures.noDetailedDiffs</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/ExpectableFactory">org.specs.specification.ExpectableFactory</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#createFailure" target="contentFrame" class="org/specs/specification/ExpectableFactory">org.specs.specification.ExpectableFactory.createFailure</a>, <a href="#theValue" target="contentFrame" class="org/specs/specification/ExpectableFactory">org.specs.specification.ExpectableFactory.theValue</a>, <a href="#theString" target="contentFrame" class="org/specs/specification/ExpectableFactory">org.specs.specification.ExpectableFactory.theString</a>, <a href="#theBlock" target="contentFrame" class="org/specs/specification/ExpectableFactory">org.specs.specification.ExpectableFactory.theBlock</a>, <a href="#theStrings" target="contentFrame" class="org/specs/specification/ExpectableFactory">org.specs.specification.ExpectableFactory.theStrings</a>, <a href="#theIterable" target="contentFrame" class="org/specs/specification/ExpectableFactory">org.specs.specification.ExpectableFactory.theIterable</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/SuccessValues">org.specs.specification.SuccessValues</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#successValueToBoolean" target="contentFrame" class="org/specs/specification/SuccessValues">org.specs.specification.SuccessValues.successValueToBoolean</a>, <a href="#successValueToString" target="contentFrame" class="org/specs/specification/SuccessValues">org.specs.specification.SuccessValues.successValueToString</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/OrResults">org.specs.specification.OrResults</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toOrResult" target="contentFrame" class="org/specs/specification/OrResults">org.specs.specification.OrResults.toOrResult</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/EventuallyMatchers">org.specs.matcher.EventuallyMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#eventually" target="contentFrame" class="org/specs/matcher/EventuallyMatchers">org.specs.matcher.EventuallyMatchers.eventually</a>, <a href="#eventually" target="contentFrame" class="org/specs/matcher/EventuallyMatchers">org.specs.matcher.EventuallyMatchers.eventually</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/MatcherResult">org.specs.matcher.MatcherResult</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toMatcherResult" target="contentFrame" class="org/specs/matcher/MatcherResult">org.specs.matcher.MatcherResult.toMatcherResult</a>, <a href="#toTuple" target="contentFrame" class="org/specs/matcher/MatcherResult">org.specs.matcher.MatcherResult.toTuple</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toFileResultMatcher" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.toFileResultMatcher</a>, <a href="#hidden" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.hidden</a>, <a href="#readable" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.readable</a>, <a href="#writable" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.writable</a>, <a href="#absolute" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.absolute</a>, <a href="#file" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.file</a>, <a href="#directory" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.directory</a>, <a href="#name" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.name</a>, <a href="#paths" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.paths</a>, <a href="#absolutePath" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.absolutePath</a>, <a href="#canonicalPath" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.canonicalPath</a>, <a href="#parent" target="contentFrame" class="org/specs/matcher/FileBeHaveMatchers">org.specs.matcher.FileBeHaveMatchers.parent</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#exist" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.exist</a>, <a href="#beReadable" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.beReadable</a>, <a href="#beWritable" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.beWritable</a>, <a href="#beAbsolute" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.beAbsolute</a>, <a href="#beHidden" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.beHidden</a>, <a href="#beFile" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.beFile</a>, <a href="#beDirectory" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.beDirectory</a>, <a href="#haveName" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.haveName</a>, <a href="#haveAbsolutePath" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.haveAbsolutePath</a>, <a href="#haveCanonicalPath" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.haveCanonicalPath</a>, <a href="#haveParent" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.haveParent</a>, <a href="#haveList" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.haveList</a>, <a href="#asPath" target="contentFrame" class="org/specs/matcher/FileBaseMatchers">org.specs.matcher.FileBaseMatchers.asPath</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toPathResultMatcher" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.toPathResultMatcher</a>, <a href="#existingPath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.existingPath</a>, <a href="#hiddenPath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.hiddenPath</a>, <a href="#readablePath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.readablePath</a>, <a href="#writablePath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.writablePath</a>, <a href="#absolutePath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.absolutePath</a>, <a href="#filePath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.filePath</a>, <a href="#directoryPath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.directoryPath</a>, <a href="#pathName" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.pathName</a>, <a href="#asAbsolutePath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.asAbsolutePath</a>, <a href="#asCanonicalPath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.asCanonicalPath</a>, <a href="#parentPath" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.parentPath</a>, <a href="#equalIgnoringSepTo" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.equalIgnoringSepTo</a>, <a href="#equalToIgnoringSep" target="contentFrame" class="org/specs/matcher/PathBeHaveMatchers">org.specs.matcher.PathBeHaveMatchers.equalToIgnoringSep</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#beAnExistingPath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beAnExistingPath</a>, <a href="#existPath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.existPath</a>, <a href="#beAReadablePath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beAReadablePath</a>, <a href="#beAWritablePath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beAWritablePath</a>, <a href="#beAnAbsolutePath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beAnAbsolutePath</a>, <a href="#beAHiddenPath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beAHiddenPath</a>, <a href="#beAFilePath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beAFilePath</a>, <a href="#beADirectoryPath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beADirectoryPath</a>, <a href="#havePathName" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.havePathName</a>, <a href="#haveAsAbsolutePath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.haveAsAbsolutePath</a>, <a href="#haveAsCanonicalPath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.haveAsCanonicalPath</a>, <a href="#haveParentPath" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.haveParentPath</a>, <a href="#listPaths" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.listPaths</a>, <a href="#beEqualIgnoringSep" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beEqualIgnoringSep</a>, <a href="#beEqualToIgnoringSep" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.beEqualToIgnoringSep</a>, <a href="#isEqualIgnoringSep" target="contentFrame" class="org/specs/matcher/PathBaseMatchers">org.specs.matcher.PathBaseMatchers.isEqualIgnoringSep</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#filePaths" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.filePaths</a>, <a href="#globToPattern" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.globToPattern</a>, <a href="#isDir" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.isDir</a>, <a href="#createDir" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.createDir</a>, <a href="#removeDir" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.removeDir</a>, <a href="#exists" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.exists</a>, <a href="#canRead" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.canRead</a>, <a href="#canWrite" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.canWrite</a>, <a href="#isAbsolute" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.isAbsolute</a>, <a href="#isFile" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.isFile</a>, <a href="#isDirectory" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.isDirectory</a>, <a href="#isHidden" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.isHidden</a>, <a href="#getName" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.getName</a>, <a href="#getAbsolutePath" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.getAbsolutePath</a>, <a href="#getCanonicalPath" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.getCanonicalPath</a>, <a href="#getParent" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.getParent</a>, <a href="#listFiles" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.listFiles</a>, <a href="#copyDir" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.copyDir</a>, <a href="#copyDir" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.copyDir</a>, <a href="#copyDir" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.copyDir</a>, <a href="#copyDir" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.copyDir</a>, <a href="#copyFile" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.copyFile</a>, <a href="#unjar" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.unjar</a>, <a href="#unjar" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.unjar</a>, <a href="#copy" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.copy</a>, <a href="#copySpecResourcesDir" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.copySpecResourcesDir</a>, <a href="#getResourcesNamed" target="contentFrame" class="org/specs/io/FileSystem">org.specs.io.FileSystem.getResourcesNamed</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/io/FileWriter">org.specs.io.FileWriter</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#write" target="contentFrame" class="org/specs/io/FileWriter">org.specs.io.FileWriter.write</a>, <a href="#createFile" target="contentFrame" class="org/specs/io/FileWriter">org.specs.io.FileWriter.createFile</a>, <a href="#mkdirs" target="contentFrame" class="org/specs/io/FileWriter">org.specs.io.FileWriter.mkdirs</a>, <a href="#writeFile" target="contentFrame" class="org/specs/io/FileWriter">org.specs.io.FileWriter.writeFile</a>, <a href="#getWriter" target="contentFrame" class="org/specs/io/FileWriter">org.specs.io.FileWriter.getWriter</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/io/FileReader">org.specs.io.FileReader</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#readFile" target="contentFrame" class="org/specs/io/FileReader">org.specs.io.FileReader.readFile</a>, <a href="#inputStream" target="contentFrame" class="org/specs/io/FileReader">org.specs.io.FileReader.inputStream</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/XmlBeHaveMatchers">org.specs.matcher.XmlBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toNodeIterableResult" target="contentFrame" class="org/specs/matcher/XmlBeHaveMatchers">org.specs.matcher.XmlBeHaveMatchers.toNodeIterableResult</a>, <a href="#toElemResult" target="contentFrame" class="org/specs/matcher/XmlBeHaveMatchers">org.specs.matcher.XmlBeHaveMatchers.toElemResult</a>, <a href="#toNodeSeqResult" target="contentFrame" class="org/specs/matcher/XmlBeHaveMatchers">org.specs.matcher.XmlBeHaveMatchers.toNodeSeqResult</a>, <a href="#toGroupResult" target="contentFrame" class="org/specs/matcher/XmlBeHaveMatchers">org.specs.matcher.XmlBeHaveMatchers.toGroupResult</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#\\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\\</a>, <a href="#\\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\\</a>, <a href="#\\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\\</a>, <a href="#\\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\\</a>, <a href="#\\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\\</a>, <a href="#\\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\\</a>, <a href="#\\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\\</a>, <a href="#\\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\\</a>, <a href="#\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\</a>, <a href="#\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\</a>, <a href="#\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\</a>, <a href="#\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\</a>, <a href="#\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\</a>, <a href="#\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\</a>, <a href="#\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\</a>, <a href="#\" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.\</a>, <a href="#equalIgnoreSpace" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.equalIgnoreSpace</a>, <a href="#beEqualToIgnoringSpace" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.beEqualToIgnoringSpace</a>, <a href="#==/" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.==/</a>, <a href="#equalToIgnoringSpace" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.equalToIgnoringSpace</a>, <a href="#equalToIgnoringSpace" target="contentFrame" class="org/specs/matcher/XmlBaseMatchers">org.specs.matcher.XmlBaseMatchers.equalToIgnoringSpace</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/PatternBeHaveMatchers">org.specs.matcher.PatternBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toPatternResult" target="contentFrame" class="org/specs/matcher/PatternBeHaveMatchers">org.specs.matcher.PatternBeHaveMatchers.toPatternResult</a>, <a href="#toOptionPatternResult" target="contentFrame" class="org/specs/matcher/PatternBeHaveMatchers">org.specs.matcher.PatternBeHaveMatchers.toOptionPatternResult</a>, <a href="#toSomePatternResult" target="contentFrame" class="org/specs/matcher/PatternBeHaveMatchers">org.specs.matcher.PatternBeHaveMatchers.toSomePatternResult</a>, <a href="#like" target="contentFrame" class="org/specs/matcher/PatternBeHaveMatchers">org.specs.matcher.PatternBeHaveMatchers.like</a>, <a href="#asNoneAs" target="contentFrame" class="org/specs/matcher/PatternBeHaveMatchers">org.specs.matcher.PatternBeHaveMatchers.asNoneAs</a>, <a href="#none" target="contentFrame" class="org/specs/matcher/PatternBeHaveMatchers">org.specs.matcher.PatternBeHaveMatchers.none</a>, <a href="#some" target="contentFrame" class="org/specs/matcher/PatternBeHaveMatchers">org.specs.matcher.PatternBeHaveMatchers.some</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#beLike" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers.beLike</a>, <a href="#beLikeA" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers.beLikeA</a>, <a href="#beNone" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers.beNone</a>, <a href="#beAlsoNone" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers.beAlsoNone</a>, <a href="#beAsNoneAs" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers.beAsNoneAs</a>, <a href="#beSome" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers.beSome</a>, <a href="#beSome" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers.beSome</a>, <a href="#beSomething" target="contentFrame" class="org/specs/matcher/PatternBaseMatchers">org.specs.matcher.PatternBaseMatchers.beSomething</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toNumericalResultMatcher" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.toNumericalResultMatcher</a>, <a href="#lessThan" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.lessThan</a>, <a href="#lessThanOrEqualTo" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.lessThanOrEqualTo</a>, <a href="#greaterThan" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.greaterThan</a>, <a href="#greaterThanOrEqualTo" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.greaterThanOrEqualTo</a>, <a href="#closeTo" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.closeTo</a>, <a href="#intToMonoid" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.intToMonoid</a>, <a href="#doubleToMonoid" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.doubleToMonoid</a>, <a href="#longToMonoid" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.longToMonoid</a>, <a href="#floatToMonoid" target="contentFrame" class="org/specs/matcher/NumericBeHaveMatchers">org.specs.matcher.NumericBeHaveMatchers.floatToMonoid</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#beLessThan" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.beLessThan</a>, <a href="#be_&amp;lt;" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.be_&lt;</a>, <a href="#&amp;lt;" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.&lt;</a>, <a href="#beLessThanOrEqualTo" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.beLessThanOrEqualTo</a>, <a href="#be_&amp;lt;=" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.be_&lt;=</a>, <a href="#&amp;lt;=" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.&lt;=</a>, <a href="#beGreaterThanOrEqualTo" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.beGreaterThanOrEqualTo</a>, <a href="#be_&amp;gt;=" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.be_&gt;=</a>, <a href="#&amp;gt;=" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.&gt;=</a>, <a href="#beGreaterThan" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.beGreaterThan</a>, <a href="#longToDouble" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.longToDouble</a>, <a href="#be_&amp;gt;" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.be_&gt;</a>, <a href="#&amp;gt;" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.&gt;</a>, <a href="#beCloseTo" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.beCloseTo</a>, <a href="#ToDelta" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.ToDelta</a>, <a href="#beCloseTo" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.beCloseTo</a>, <a href="#~" target="contentFrame" class="org/specs/matcher/NumericBaseMatchers">org.specs.matcher.NumericBaseMatchers.~</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toMapKeyResultMatcher" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.toMapKeyResultMatcher</a>, <a href="#toMapValueResultMatcher" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.toMapValueResultMatcher</a>, <a href="#toJavaMapResultMatcher" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.toJavaMapResultMatcher</a>, <a href="#toMapResultMatcher" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.toMapResultMatcher</a>, <a href="#toPartialFunctionMatcher" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.toPartialFunctionMatcher</a>, <a href="#key" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.key</a>, <a href="#value" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.value</a>, <a href="#pair" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.pair</a>, <a href="#pairs" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.pairs</a>, <a href="#definedBy" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.definedBy</a>, <a href="#definedAt" target="contentFrame" class="org/specs/matcher/MapBeHaveMatchers">org.specs.matcher.MapBeHaveMatchers.definedAt</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#haveKey" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.haveKey</a>, <a href="#notHaveKey" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.notHaveKey</a>, <a href="#haveValue" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.haveValue</a>, <a href="#notHaveValue" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.notHaveValue</a>, <a href="#havePair" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.havePair</a>, <a href="#notHavePair" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.notHavePair</a>, <a href="#havePairs" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.havePairs</a>, <a href="#notHavePairs" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.notHavePairs</a>, <a href="#beDefinedAt" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.beDefinedAt</a>, <a href="#beDefinedBy" target="contentFrame" class="org/specs/matcher/MapBaseMatchers">org.specs.matcher.MapBaseMatchers.beDefinedBy</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toArrayResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toArrayResultMatcher</a>, <a href="#toListResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toListResultMatcher</a>, <a href="#toSeqResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toSeqResultMatcher</a>, <a href="#toSetResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toSetResultMatcher</a>, <a href="#toIterableResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toIterableResultMatcher</a>, <a href="#toJavaCollectionResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toJavaCollectionResultMatcher</a>, <a href="#toJavaListResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toJavaListResultMatcher</a>, <a href="#toJavaSetResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toJavaSetResultMatcher</a>, <a href="#toAJavaMapResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toAJavaMapResultMatcher</a>, <a href="#toAMapResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toAMapResultMatcher</a>, <a href="#toStringListResultMatcher" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.toStringListResultMatcher</a>, <a href="#size" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.size</a>, <a href="#sameElementsAs" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.sameElementsAs</a>, <a href="#sameSeqAs" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.sameSeqAs</a>, <a href="#sameSetAs" target="contentFrame" class="org/specs/matcher/IterableBeHaveMatchers">org.specs.matcher.IterableBeHaveMatchers.sameSetAs</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#contain" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.contain</a>, <a href="#notContain" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.notContain</a>, <a href="#containAll" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.containAll</a>, <a href="#notContainAll" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.notContainAll</a>, <a href="#containInOrder" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.containInOrder</a>, <a href="#have" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.have</a>, <a href="#notHave" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.notHave</a>, <a href="#exist" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.exist</a>, <a href="#notExist" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.notExist</a>, <a href="#existMatch" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.existMatch</a>, <a href="#containMatch" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.containMatch</a>, <a href="#notContainMatch" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.notContainMatch</a>, <a href="#containMatchOnlyOnce" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.containMatchOnlyOnce</a>, <a href="#notExistMatch" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.notExistMatch</a>, <a href="#haveSameElementsAs" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.haveSameElementsAs</a>, <a href="#haveTheSameElementsAs" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.haveTheSameElementsAs</a>, <a href="#beSameSeqAs" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.beSameSeqAs</a>, <a href="#beTheSameSeqAs" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.beTheSameSeqAs</a>, <a href="#beSameSetAs" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.beSameSetAs</a>, <a href="#beTheSameSetAs" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.beTheSameSetAs</a>, <a href="#haveSize" target="contentFrame" class="org/specs/matcher/IterableBaseMatchers">org.specs.matcher.IterableBaseMatchers.haveSize</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/StringBeHaveMatchers">org.specs.matcher.StringBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#toStringResultMatcher" target="contentFrame" class="org/specs/matcher/StringBeHaveMatchers">org.specs.matcher.StringBeHaveMatchers.toStringResultMatcher</a>, <a href="#length" target="contentFrame" class="org/specs/matcher/StringBeHaveMatchers">org.specs.matcher.StringBeHaveMatchers.length</a>, <a href="#matching" target="contentFrame" class="org/specs/matcher/StringBeHaveMatchers">org.specs.matcher.StringBeHaveMatchers.matching</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#beEqualToIgnoringCase" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.beEqualToIgnoringCase</a>, <a href="#be_==/" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.be_==/</a>, <a href="#equalIgnoreCase" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.equalIgnoreCase</a>, <a href="#be_!=/" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.be_!=/</a>, <a href="#notEqualIgnoreCase" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.notEqualIgnoreCase</a>, <a href="#notBeEqualToIgnoringCase" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.notBeEqualToIgnoringCase</a>, <a href="#beEqualToIgnoringSpace" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.beEqualToIgnoringSpace</a>, <a href="#equalIgnoreSpace" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.equalIgnoreSpace</a>, <a href="#notEqualIgnoreSpace" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.notEqualIgnoreSpace</a>, <a href="#notBeEqualToIgnoringSpace" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.notBeEqualToIgnoringSpace</a>, <a href="#include" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.include</a>, <a href="#notInclude" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.notInclude</a>, <a href="#beMatching" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.beMatching</a>, <a href="#notBeMatching" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.notBeMatching</a>, <a href="#startWith" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.startWith</a>, <a href="#notStartWith" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.notStartWith</a>, <a href="#endWith" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.endWith</a>, <a href="#notEndWith" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.notEndWith</a>, <a href="#find" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.find</a>, <a href="#haveLength" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.haveLength</a>, <a href="#==/" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.==/</a>, <a href="#!=/" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.!=/</a>, <a href="#equalToIgnoringCase" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.equalToIgnoringCase</a>, <a href="#equalToIgnoringSpace" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.equalToIgnoringSpace</a>, <a href="#equalIgnoringCaseTo" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.equalIgnoringCaseTo</a>, <a href="#equalIgnoringSpaceTo" target="contentFrame" class="org/specs/matcher/StringBaseMatchers">org.specs.matcher.StringBaseMatchers.equalIgnoringSpaceTo</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/LogicalMatchers">org.specs.matcher.LogicalMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#not" target="contentFrame" class="org/specs/matcher/LogicalMatchers">org.specs.matcher.LogicalMatchers.not</a>, <a href="#verifyAll" target="contentFrame" class="org/specs/matcher/LogicalMatchers">org.specs.matcher.LogicalMatchers.verifyAll</a>, <a href="#verifyAll" target="contentFrame" class="org/specs/matcher/LogicalMatchers">org.specs.matcher.LogicalMatchers.verifyAll</a>, <a href="#verifyAny" target="contentFrame" class="org/specs/matcher/LogicalMatchers">org.specs.matcher.LogicalMatchers.verifyAny</a>, <a href="#verifyAny" target="contentFrame" class="org/specs/matcher/LogicalMatchers">org.specs.matcher.LogicalMatchers.verifyAny</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#be" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.be</a>, <a href="#not" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.not</a>, <a href="#have" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.have</a>, <a href="#the" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.the</a>, <a href="#toAnyResultMatcher" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.toAnyResultMatcher</a>, <a href="#toAnyEmptyResultMatcher" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.toAnyEmptyResultMatcher</a>, <a href="#equalTo" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.equalTo</a>, <a href="#asNullAs" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.asNullAs</a>, <a href="#in" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.in</a>, <a href="#oneOf" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.oneOf</a>, <a href="#empty" target="contentFrame" class="org/specs/matcher/AnyBeHaveMatchers">org.specs.matcher.AnyBeHaveMatchers.empty</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#be" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.be</a>, <a href="#notBe" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notBe</a>, <a href="#beEqual" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beEqual</a>, <a href="#beEqualTo" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beEqualTo</a>, <a href="#beDifferent" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beDifferent</a>, <a href="#beDifferentFrom" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beDifferentFrom</a>, <a href="#is_==" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.is_==</a>, <a href="#be_==" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.be_==</a>, <a href="#notEq" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notEq</a>, <a href="#is_!=" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.is_!=</a>, <a href="#be_!=" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.be_!=</a>, <a href="#beNull" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beNull</a>, <a href="#isNull" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isNull</a>, <a href="#beAlsoNull" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beAlsoNull</a>, <a href="#beAsNullAs" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beAsNullAs</a>, <a href="#isAsNullAs" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isAsNullAs</a>, <a href="#notBeNull" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notBeNull</a>, <a href="#isNotNull" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isNotNull</a>, <a href="#beTrue" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beTrue</a>, <a href="#isTrue" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isTrue</a>, <a href="#beFalse" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beFalse</a>, <a href="#isFalse" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isFalse</a>, <a href="#beIn" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beIn</a>, <a href="#isIn" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isIn</a>, <a href="#notBeIn" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notBeIn</a>, <a href="#isNotIn" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isNotIn</a>, <a href="#notIn" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notIn</a>, <a href="#beOneOf" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beOneOf</a>, <a href="#isOneOf" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isOneOf</a>, <a href="#notBeOneOf" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notBeOneOf</a>, <a href="#isNotOneOf" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isNotOneOf</a>, <a href="#notOneOf" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notOneOf</a>, <a href="#beEmpty" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beEmpty</a>, <a href="#notBeEmpty" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notBeEmpty</a>, <a href="#isNotEmpty" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isNotEmpty</a>, <a href="#notEmpty" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notEmpty</a>, <a href="#isEmpty" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.isEmpty</a>, <a href="#verify" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.verify</a>, <a href="#throwAnException" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.throwAnException</a>, <a href="#throwA" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.throwA</a>, <a href="#throwA" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.throwA</a>, <a href="#throwAn" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.throwAn</a>, <a href="#throwAn" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.throwAn</a>, <a href="#throwThis" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.throwThis</a>, <a href="#throwException" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.throwException</a>, <a href="#message" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.message</a>, <a href="#okMessage" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.okMessage</a>, <a href="#koMessage" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.koMessage</a>, <a href="#haveClass" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.haveClass</a>, <a href="#notHaveClass" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notHaveClass</a>, <a href="#beAssignableFrom" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.beAssignableFrom</a>, <a href="#notBeAssignableFrom" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notBeAssignableFrom</a>, <a href="#haveSuperClass" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.haveSuperClass</a>, <a href="#notHaveSuperClass" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.notHaveSuperClass</a>, <a href="#toMatcher" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.toMatcher</a>, <a href="#toMatcher2" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.toMatcher2</a>, <a href="#==" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.==</a>, <a href="#!=" target="contentFrame" class="org/specs/matcher/AnyBaseMatchers">org.specs.matcher.AnyBaseMatchers.!=</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#setParent" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.setParent</a>, <a href="#parentSpecifications" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.parentSpecifications</a>, <a href="#isSpecifiedBy" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.isSpecifiedBy</a>, <a href="#areSpecifiedBy" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.areSpecifiedBy</a>, <a href="#include" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.include</a>, <a href="#declare" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.declare</a>, <a href="#allSystems" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.allSystems</a>, <a href="#allExamples" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.allExamples</a>, <a href="#contains" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.contains</a>, <a href="#getExample" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.getExample</a>, <a href="#specifyExample" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.specifyExample</a>, <a href="#forExample" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.forExample</a>, <a href="#forExample" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.forExample</a>, <a href="#lastExample" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.lastExample</a>, <a href="#exampleContainer" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.exampleContainer</a>, <a href="#beforeExample" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.beforeExample</a>, <a href="#afterExample" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.afterExample</a>, <a href="#firstLevelExamplesNb" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.firstLevelExamplesNb</a>, <a href="#failures" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.failures</a>, <a href="#skipped" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.skipped</a>, <a href="#errors" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.errors</a>, <a href="#successes" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.successes</a>, <a href="#examples" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.examples</a>, <a href="#expectationsNb" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.expectationsNb</a>, <a href="#isFailing" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.isFailing</a>, <a href="#resetForExecution" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.resetForExecution</a>, <a href="#taggedComponents" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.taggedComponents</a>, <a href="#toString" target="contentFrame" class="org/specs/specification/BaseSpecification">org.specs.specification.BaseSpecification.toString</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/SpecificationConfiguration">org.specs.specification.SpecificationConfiguration</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#shareVariables" target="contentFrame" class="org/specs/specification/SpecificationConfiguration">org.specs.specification.SpecificationConfiguration.shareVariables</a>, <a href="#dontShareVariables" target="contentFrame" class="org/specs/specification/SpecificationConfiguration">org.specs.specification.SpecificationConfiguration.dontShareVariables</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/LinkedSpecification">org.specs.specification.LinkedSpecification</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#linkTo" target="contentFrame" class="org/specs/specification/LinkedSpecification">org.specs.specification.LinkedSpecification.linkTo</a>, <a href="#partitionLinkedSpecifications" target="contentFrame" class="org/specs/specification/LinkedSpecification">org.specs.specification.LinkedSpecification.partitionLinkedSpecifications</a>, <a href="#linkedSpecifications" target="contentFrame" class="org/specs/specification/LinkedSpecification">org.specs.specification.LinkedSpecification.linkedSpecifications</a>, <a href="#unlinkedSpecifications" target="contentFrame" class="org/specs/specification/LinkedSpecification">org.specs.specification.LinkedSpecification.unlinkedSpecifications</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#statusClass" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.statusClass</a>, <a href="#statusAsText" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.statusAsText</a>, <a href="#hasFailureOrErrors" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.hasFailureOrErrors</a>, <a href="#failureAndErrors" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.failureAndErrors</a>, <a href="#issues" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.issues</a>, <a href="#issueMessages" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.issueMessages</a>, <a href="#hasIssues" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.hasIssues</a>, <a href="#isOk" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.isOk</a>, <a href="#copyResults" target="contentFrame" class="org/specs/execute/HasResults">org.specs.execute.HasResults.copyResults</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#stringToTag" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.stringToTag</a>, <a href="#tagNames" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.tagNames</a>, <a href="#tag" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.tag</a>, <a href="#clearTags" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.clearTags</a>, <a href="#addTag" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.addTag</a>, <a href="#addTags" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.addTags</a>, <a href="#accept" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.accept</a>, <a href="#acceptTag" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.acceptTag</a>, <a href="#acceptTags" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.acceptTags</a>, <a href="#acceptAnyTag" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.acceptAnyTag</a>, <a href="#reject" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.reject</a>, <a href="#rejectTag" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.rejectTag</a>, <a href="#rejectTags" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.rejectTags</a>, <a href="#isAccepted" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.isAccepted</a>, <a href="#tagSpec" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.tagSpec</a>, <a href="#tagWith" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.tagWith</a>, <a href="#makeTagged" target="contentFrame" class="org/specs/specification/Tagged">org.specs.specification.Tagged.makeTagged</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/ExampleExpectationsListener">org.specs.specification.ExampleExpectationsListener</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#addExpectation" target="contentFrame" class="org/specs/specification/ExampleExpectationsListener">org.specs.specification.ExampleExpectationsListener.addExpectation</a>, <a href="#addExpectation" target="contentFrame" class="org/specs/specification/ExampleExpectationsListener">org.specs.specification.ExampleExpectationsListener.addExpectation</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/ExpectationsListener">org.specs.specification.ExpectationsListener</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#anyToExpectationCounter" target="contentFrame" class="org/specs/specification/ExpectationsListener">org.specs.specification.ExpectationsListener.anyToExpectationCounter</a>, <a href="#isExpectation" target="contentFrame" class="org/specs/specification/ExpectationsListener">org.specs.specification.ExpectationsListener.isExpectation</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/SpecificationExecutor">org.specs.specification.SpecificationExecutor</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#executeExample" target="contentFrame" class="org/specs/specification/SpecificationExecutor">org.specs.specification.SpecificationExecutor.executeExample</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/LifeCycle">org.specs.specification.LifeCycle</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#until" target="contentFrame" class="org/specs/specification/LifeCycle">org.specs.specification.LifeCycle.until</a>, <a href="#beforeExpectations" target="contentFrame" class="org/specs/specification/LifeCycle">org.specs.specification.LifeCycle.beforeExpectations</a>, <a href="#afterExpectations" target="contentFrame" class="org/specs/specification/LifeCycle">org.specs.specification.LifeCycle.afterExpectations</a>, <a href="#executeExpectations" target="contentFrame" class="org/specs/specification/LifeCycle">org.specs.specification.LifeCycle.executeExpectations</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/SequentialExecution">org.specs.specification.SequentialExecution</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#isSequential" target="contentFrame" class="org/specs/specification/SequentialExecution">org.specs.specification.SequentialExecution.isSequential</a>, <a href="#setSequential" target="contentFrame" class="org/specs/specification/SequentialExecution">org.specs.specification.SequentialExecution.setSequential</a>, <a href="#setNotSequential" target="contentFrame" class="org/specs/specification/SequentialExecution">org.specs.specification.SequentialExecution.setNotSequential</a>, <a href="#setSequentialIs" target="contentFrame" class="org/specs/specification/SequentialExecution">org.specs.specification.SequentialExecution.setSequentialIs</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/specification/SpecificationSystems">org.specs.specification.SpecificationSystems</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#systems" target="contentFrame" class="org/specs/specification/SpecificationSystems">org.specs.specification.SpecificationSystems.systems</a>, <a href="#specify" target="contentFrame" class="org/specs/specification/SpecificationSystems">org.specs.specification.SpecificationSystems.specify</a>, <a href="#specify" target="contentFrame" class="org/specs/specification/SpecificationSystems">org.specs.specification.SpecificationSystems.specify</a>, <a href="#addToSusVerb" target="contentFrame" class="org/specs/specification/SpecificationSystems">org.specs.specification.SpecificationSystems.addToSusVerb</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="" target="contentFrame" class="org/specs/util/Tree">org.specs.util.Tree</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="#pathFromRoot" target="contentFrame" class="org/specs/util/Tree">org.specs.util.Tree.pathFromRoot</a>, <a href="#addChild" target="contentFrame" class="org/specs/util/Tree">org.specs.util.Tree.addChild</a>, <a href="#childNodes" target="contentFrame" class="org/specs/util/Tree">org.specs.util.Tree.childNodes</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html" target="_self">AnyRef</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#getClass%28%29" target="_self">getClass</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#hashCode%28%29" target="_self">hashCode</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#equals%28Any%29" target="_self">equals</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#clone%28%29" target="_self">clone</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#notify%28%29" target="_self">notify</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#notifyAll%28%29" target="_self">notifyAll</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28Long%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28Long%2CInt%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#wait%28%29" target="_self">wait</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#finalize%28%29" target="_self">finalize</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#%3D%3D%28AnyRef%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#%21%3D%28AnyRef%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#eq%28AnyRef%29" target="_self">eq</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#ne%28AnyRef%29" target="_self">ne</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/AnyRef.html#synchronized%28T0%29" target="_self">synchronized</a>
+        </td></tr>
+      </table><table summary="" cellpadding="3" class="inherited">
+        <tr><td class="title" colspan="2">
+          Methods inherited from <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html" target="_self">Any</a>
+        </td></tr>
+        <tr><td class="signature" colspan="2">
+          <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%3D%3D%28Any%29" target="_self">==</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#%21%3D%28Any%29" target="_self">!=</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#isInstanceOf" target="_self">isInstanceOf</a>, <a href="http://www.scala-lang.org/docu/files/api/scala/Any.html#asInstanceOf" target="_self">asInstanceOf</a>
+        </td></tr>
+      </table>
+
+
+      
+
+
+
+
+
+    <hr></hr>
+        <table summary="" class="navigation">
+        <tr>
+          <td class="navigation-links" valign="top">
+            <!-- <table><tr></tr></table> -->
+          </td>
+          <td align="right" valign="top" style="white-space:nowrap;" rowspan="2">
+            <div class="doctitle-larger">Prototype 1.0 API</div>
+          </td>
+        </tr>
+        <tr><td></td></tr>
+      </table>
+      </body>
+      </html>

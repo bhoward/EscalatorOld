@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" ></meta>
+        <title>edu/depauw/util/Hello.scala</title>
+        <script type="text/javascript" src="../../../jquery-all.js"></script>
+        <script type="text/javascript" src="../../../linked.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../style.css" title="Style"></link>
+    </head>
+    <body>
+        <pre>
+<span class="keyword">package</span> edu.depauw.util
+
+<span class="keyword">class</span> <a title="class Hello extends java.lang.Object with ScalaObject" id="6760">Hello</a>(<a title="String" id="9607">thing</a>: <a title="String" id="1806">String</a>) {
+  <span class="keyword">def</span> <a title="=&gt; java.lang.String" id="9604">greet</a> = <span title="java.lang.String(&quot;Hello, &quot;)" class="string">&quot;Hello, &quot;</span> <a title="(Any)java.lang.String" id="6006">+</a> <a href="#9607" title="String">thing</a>
+}
+
+<span class="keyword">object</span> <a title="object edu.depauw.util.Main" id="6761">Main</a> {
+  <span class="keyword">def</span> <a title="(Array[String])Unit" id="9611">main</a>(<a title="Array[String]" id="9613">args</a>: <a title="Array[String]" id="1038">Array</a>[String]) {
+    <span class="keyword">val</span> <a title="edu.depauw.util.Hello" id="9614">hw</a> = <span title="edu.depauw.util.Hello" class="keyword">new</span> <a href="#6760" title="edu.depauw.util.Hello">Hello</a>(<span title="java.lang.String(&quot;World&quot;)" class="string">&quot;World&quot;</span>)
+    <a title="(Any)Unit" id="793">println</a>(<a href="#9614" title="edu.depauw.util.Hello">hw</a>.<a href="#9604" title="=&gt; java.lang.String">greet</a>)
+  }
+}
+
+        </pre>
+    </body>
+</html>
